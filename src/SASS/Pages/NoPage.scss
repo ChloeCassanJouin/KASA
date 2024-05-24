@@ -1,0 +1,11 @@
+@import "./SASS/Layout/header.scss";
+
+body {
+    width: 100%;
+    scroll-behavior: smooth; 
+    @media (min-width:$min-width-largedesktop) {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: auto;
+      };
+    } 

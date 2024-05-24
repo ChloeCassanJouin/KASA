@@ -6,7 +6,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Lodging from './pages/Lodging.jsx';
 import NoPage from './pages/NoPage.jsx';
-git push -u origin main
+import './SASS/Main.css';
 
 export default function App() {
   return (
