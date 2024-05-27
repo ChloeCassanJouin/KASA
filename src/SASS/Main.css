@@ -59,23 +59,29 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-
-.HomePageBanner {
+.HomePageBannerContainer .HomePageBanner {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 10em;
   object-fit: fill;
   border-radius: 30px;
   filter: brightness(50%);
 }
-
-.HomePageBannerText {
+.HomePageBannerContainer .HomePageBannerTextContainer {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 100%;
+}
+.HomePageBannerContainer .HomePageBannerText {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
   width: auto;
   color: white;
   position: absolute;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
