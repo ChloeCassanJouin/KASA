@@ -33,6 +33,10 @@ body {
   text-decoration: underline;
 }
 
+.LodgingCardsContainer {
+  background-color: grey;
+}
+
 .footer {
   background-color: black;
   padding: 2px 0;
