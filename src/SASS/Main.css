@@ -1,24 +1,81 @@
-.header {
-  background-color: blue;
-  padding: 20px 0;
+body {
+  font-family: "Roboto", sans-serif;
 }
-.header .logo {
-  font-size: 2em;
-  color: #fff;
+
+.header {
+  padding: 20px 50px 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+.header .header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .LogoHeader {
+  height: 35px;
 }
 .header nav ul {
   list-style: none;
   display: flex;
+  gap: 1em;
 }
 .header nav ul li {
   margin-right: 15px;
 }
 .header nav ul li a {
-  color: #fff;
   text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
 .header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=Main.css.map */
+.footer {
+  background-color: black;
+  padding: 2px 0;
+  text-align: center;
+  color: #fff;
+}
+.footer .footer_logo {
+  padding-top: 25px;
+  padding-bottom: 8px;
+}
+.footer .LogoFooter {
+  height: 20px;
+}
+.footer p {
+  text-align: center;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+.HomePageBannerContainer {
+  display: flex;
+  max-width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.HomePageBanner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: fill;
+  border-radius: 30px;
+  filter: brightness(50%);
+}
+
+.HomePageBannerText {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: auto;
+  color: white;
+  position: absolute;
+}
+
+/*# sourceMappingURL=main.css.map */
