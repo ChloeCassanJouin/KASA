@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/Images/LOGO.svg'; // Assurez-vous d'avoir le logo dans le dossier assets
+import logoFooter from '../assets/Images/logoFooter.png'; // Assurez-vous d'avoir le logo dans le dossier assets
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer__logo">
-                <img src={logo} alt="Kasa Logo" />
+            <div className="footer_logo">
+                <img src={logoFooter} alt="Kasa Logo" className="LogoFooter"/>
             </div>
             <p className="footer__text">© 2024 Kasa. All rights reserved</p>
         </footer>

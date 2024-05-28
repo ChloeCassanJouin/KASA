@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from "../components/Header";
 
-export default function Home() {
+export default function Lodging() {
   return (
     <>
       <Header />
-      <h1>Home page</h1>
+      <h1>Lodging page</h1>
     </>
   );
 }

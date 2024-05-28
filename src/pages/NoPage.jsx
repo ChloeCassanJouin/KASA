@@ -6,7 +6,7 @@ export default function NoPage() {
   return (
     <>
       <Header />
-      <h1>NoPage</h1>
+      <h1>NoPage22</h1>
       <Footer />
     </>
   );
