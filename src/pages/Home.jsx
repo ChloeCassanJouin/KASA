@@ -26,10 +26,10 @@ export default function Home() {
       <section className='Lodging'>
         <div className='LodgingCardsContainer'>
           {data.map((item, index) => (
-            <a href="./Lodging.jsx" key={index}>
+            <a href="/Lodging" key={index}>
               <article className='LodgingCard'>
-                <img src={item.cover} alt={item.title} className='LodgingCardImg'/>
-                <div>
+                <img src={item.cover} alt={item.title}/>
+                <div className='LodgingTitleContainer'>
                   <p className='LodgingTitle'>{item.title}</p>
                 </div>
               </article>
