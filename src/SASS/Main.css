@@ -65,7 +65,7 @@ main {
 }
 .Lodging .LodgingCardsContainer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .Lodging .LodgingCardsContainer a .LodgingCard {
   background-color: #fff;
@@ -87,6 +87,7 @@ main {
   display: flex;
   justify-content: center;
   height: 50px;
+  background: linear-gradient(rgba(224, 40, 40, 0.79), rgba(106, 0, 0, 0.96));
 }
 .Lodging .LodgingCardsContainer a .LodgingCard .LodgingTitleContainer .LodgingTitle {
   margin: 0;

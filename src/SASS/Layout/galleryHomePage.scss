@@ -12,16 +12,16 @@
 
         a{
             text-decoration: none;
-            color: black;
+            color: white;
         
             .LodgingCard {
-                background-color: #fff;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                transition: transform 0.3s;
-                flex: 1 1 calc(33.333% - 20px);
-                box-sizing: border-box;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                //background-color: #fff;
+                //border: 1px solid #ddd;
+                //border-radius: 8px;
+                //transition: transform 0.3s;
+                //flex: 1 1 calc(33.333% - 20px);
+                //box-sizing: border-box;
+                //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
             .LodgingCard:hover {
                 transform: translateY(-5px);
@@ -36,10 +36,11 @@
                     display: flex;
                     justify-content: center;
                     height: 50px;
+                    background: linear-gradient(rgba(224, 40, 40, 0.79), rgba(106 0 0 / 96%));
 
                     .LodgingTitle {
                         margin: 0;
-                        font-size: 1em;
+                        font-size: 13px;
                         display: flex;
                         align-items: center;
                         padding: 0 30px;
