@@ -1,8 +1,8 @@
 .about-content {
-  padding: 70px;
+  padding: 0 110px;
 
   .accordion {
-    margin: 10px 0;
+    margin: 20px 0;
     background-color: rgba(224, 40, 40, 0.79);
     border-radius: 5px;
     overflow: hidden;
@@ -11,7 +11,7 @@
     &-title {
       background: rgba(224, 40, 40, 0.79);
       cursor: pointer;
-      padding: 15px;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -44,12 +44,14 @@
       max-height: 0;
       opacity: 0;
       visibility: hidden;
+      display: none;
       
       &.open {
         max-height: 200px; 
         padding: 15px; 
         opacity: 1;
         visibility: visible;
+        display: block;
     }
   }
   }

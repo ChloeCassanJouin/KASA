@@ -161,10 +161,10 @@ html {
 }
 
 .about-content {
-  padding: 70px;
+  padding: 0 70px;
 }
 .about-content .accordion {
-  margin: 10px 0;
+  margin: 20px 0;
   background-color: rgba(224, 40, 40, 0.79);
   border-radius: 5px;
   overflow: hidden;
@@ -200,12 +200,14 @@ html {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
+  display: none;
 }
 .about-content .accordion-content.open {
   max-height: 200px;
   padding: 15px;
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 @media (max-width: 768px) {
   .about-content .accordion-title {
