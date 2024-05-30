@@ -1,0 +1,25 @@
+.errorContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .errorNumber {
+        color: rgba(224, 40, 40, 0.79);
+        font-size: 80px;
+        font-weight: bold;
+        margin: 40px;
+    }
+
+    .errorText1 {
+        color: rgba(224, 40, 40, 0.79);
+        margin-bottom: 40px;
+    }
+
+    .errorText2 {
+        margin-bottom: 60px;
+        font-size: 6px;
+        color: black;
+    }
+}
