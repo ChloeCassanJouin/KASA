@@ -12,18 +12,20 @@ export default function Home() {
       const libraryData = await fetchLibraryData();
       setData(libraryData);
     }
-    getData();
+    getData(); 
   }, []);
 
   return (
     <>
       <Header />
-      <div className='HomePageBannerContainer'>
-        <div className='HomePageBannerTextContainer'>
-          <p className='HomePageBannerText'>Chez vous, partout et ailleurs</p>
+      <main>
+      <div className='BannerContainer'>
+        <div className='BannerTextContainer'>
+          <p className='BannerText'>Chez vous, partout et ailleurs</p>
         </div>
-        <img src="./src/assets/Images/homepage-banner.png" alt="Homepage Banner" className="HomePageBanner" />
+        <img src="./src/assets/Images/homepage-banner.png" alt="Homepage Banner" className="homePageBanner" />
       </div>
+      </main>
       <GalleryHomePage data={data} />
       <Footer />
     </>
