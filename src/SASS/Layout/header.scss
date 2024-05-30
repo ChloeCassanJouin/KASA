@@ -34,3 +34,30 @@
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .logo {
+      img {
+        max-width: 150px;
+      }
+    }
+
+
+  @media screen and (max-width: 480px) {
+    .logo {
+      img {
+        max-width: 100px;
+      }
+    }
+
+    .nav {
+      ul {
+        flex-direction: column;
+
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

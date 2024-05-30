@@ -16,10 +16,6 @@ html {
   box-sizing: inherit;
 }
 
-main {
-  padding: 20px;
-}
-
 .header {
   padding: 20px 50px 20px 50px;
   display: flex;
@@ -51,6 +47,22 @@ main {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .logo img {
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  .logo img {
+    max-width: 100px;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+  .nav ul li {
+    margin: 10px 0;
+  }
+}
 .Lodging {
   padding: 30px;
   background-color: rgba(247, 244, 244, 0.938);
@@ -148,15 +160,17 @@ main {
   font-weight: bold;
 }
 
-.accordion {
+.about-content {
+  padding: 70px;
+}
+.about-content .accordion {
   margin: 10px 0;
-  border: 1px solid rgba(224, 40, 40, 0.79);
   background-color: rgba(224, 40, 40, 0.79);
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.accordion-title {
+.about-content .accordion-title {
   background: rgba(224, 40, 40, 0.79);
   cursor: pointer;
   padding: 15px;
@@ -164,37 +178,44 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.accordion-title h2 {
+.about-content .accordion-title h2 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
 }
-.accordion-title span {
-  font-size: 1.5rem;
-  line-height: 1;
+.about-content .accordion-title .accordion-arrow img {
+  width: 1.5rem;
   transition: transform 0.3s ease;
   color: white;
 }
-.accordion-title:hover {
-  background: #eaeaea;
+.about-content .accordion-title .accordion-arrow .rotate {
+  transform: rotate(-180deg);
 }
-.accordion-content {
+.about-content .accordion-content {
   padding: 15px;
-  background: #fff;
-  border-top: 1px solid #ccc;
+  background: rgb(245, 239, 239);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
-
-/* Media queries for responsiveness */
+.about-content .accordion-content.open {
+  max-height: 200px;
+  padding: 15px;
+  opacity: 1;
+  visibility: visible;
+}
 @media (max-width: 768px) {
-  .accordion-title {
+  .about-content .accordion-title {
     flex-direction: column;
     align-items: flex-start;
   }
-  .accordion-title span {
+  .about-content .accordion-title .accordion-arrow img {
     align-self: flex-end;
   }
-  .accordion-content {
+  .about-content .accordion-content {
     padding: 10px;
   }
 }

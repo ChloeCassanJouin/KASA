@@ -1,11 +1,13 @@
-.accordion {
+.about-content {
+  padding: 70px;
+
+  .accordion {
     margin: 10px 0;
-    border: 1px solid rgba(224, 40, 40, 0.79);
-    background-color:rgba(224, 40, 40, 0.79);
+    background-color: rgba(224, 40, 40, 0.79);
     border-radius: 5px;
     overflow: hidden;
     transition: all 0.3s ease;
-  
+
     &-title {
       background: rgba(224, 40, 40, 0.79);
       cursor: pointer;
@@ -13,46 +15,60 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      //transition: background 0.3s ease;
-  
+
       h2 {
         margin: 0;
         font-size: 1.2rem;
         font-weight: 600;
         color: white;
       }
-  
-      span {
-        font-size: 1.5rem;
-        line-height: 1;
-        transition: transform 0.3s ease;
-        color: white;
-      }
-  
-      &:hover {
-        background: #eaeaea;
+
+      .accordion-arrow {
+        img {
+          width: 1.5rem; 
+          transition: transform 0.3s ease;
+          color: white;
+        }
+
+        .rotate {
+          transform: rotate(-180deg); 
+        }
       }
     }
-  
+
     &-content {
       padding: 15px;
-      background: #fff;
-      border-top: 1px solid #ccc;
+      background: rgb(245, 239, 239);
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      
+      &.open {
+        max-height: 200px; 
+        padding: 15px; 
+        opacity: 1;
+        visibility: visible;
     }
   }
-  
-  /* Media queries for responsiveness */
+  }
+
+  // Media queries for responsiveness
   @media (max-width: 768px) {
     .accordion-title {
       flex-direction: column;
       align-items: flex-start;
-  
-      span {
-        align-self: flex-end;
+
+      .accordion-arrow {
+        img {
+          align-self: flex-end;
+        }
       }
     }
-  
+
     .accordion-content {
       padding: 10px;
     }
   }
+}
