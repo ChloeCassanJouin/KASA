@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function GalleryHomePage({ data }) {
+  console.log(data)
   return (
     <section className='Lodging'>
       <div className='LodgingCardsContainer'>

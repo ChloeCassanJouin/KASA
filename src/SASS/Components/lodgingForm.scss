@@ -1,0 +1,44 @@
+.lodgingFormColumns {
+    margin: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .lodgingFormColumn1 {
+        background-color: pink;
+
+        .lodgingFormTitle{
+            color: rgba(224, 40, 40, 0.79); 
+            font-size: 40px;  
+            margin:0;
+        }
+    }
+    
+    .lodgingFormColumn2 {
+        background-color: pink;
+
+        .lodgingFormOwner{
+            color: rgba(224, 40, 40, 0.79);  
+        }
+    }  
+}
+
+.lodgingAccordionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .lodgingAccordion1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: pink;
+    }
+
+    .lodgingAccordion2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: pink;
+    }
+}

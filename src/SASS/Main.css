@@ -244,4 +244,50 @@ html {
   color: black;
 }
 
+.carouselContainer {
+  background-color: rgba(247, 244, 244, 0.938);
+  margin: 0 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.lodgingFormColumns {
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lodgingFormColumns .lodgingFormColumn1 {
+  background-color: pink;
+}
+.lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle {
+  color: rgba(224, 40, 40, 0.79);
+  font-size: 40px;
+}
+.lodgingFormColumns .lodgingFormColumn2 {
+  background-color: pink;
+}
+.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwner {
+  color: rgba(224, 40, 40, 0.79);
+}
+
+.lodgingAccordionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.lodgingAccordionContainer .lodgingAccordion1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: pink;
+}
+.lodgingAccordionContainer .lodgingAccordion2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: pink;
+}
+
 /*# sourceMappingURL=main.css.map */

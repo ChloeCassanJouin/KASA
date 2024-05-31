@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
@@ -11,8 +10,8 @@ export default function Lodging() {
 
   useEffect(() => {
     async function getData() {
-      const libraryData = await fetchLibraryData();
-      setData(libraryData);
+      const libraryLodgingData = await fetchLibraryData();
+      setData(libraryLodgingData);
     }
     getData(); 
   }, []);
@@ -20,13 +19,16 @@ export default function Lodging() {
   return (
     <>
       <Header />
-      <main>
-        <div className='LodgingCarousel'>
-          <Carousel data={data} /> 
-        </div>
-      </main>
-      <LodgingForm />
+
+      <LodgingForm data={data} />
       <Footer />
     </>
   );
 }
+
+//<Carousel data={data} />
+/*<main>
+<div className='LodgingCarousel'>
+<Carousel data={data} />
+</div>
+</main>*/
