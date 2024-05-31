@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -46,12 +47,18 @@ html {
   text-decoration: underline;
 }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+  .header {
+    padding: 15px;
+  }
+}
 @media screen and (max-width: 768px) {
   .logo img {
     max-width: 150px;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .logo img {
     max-width: 100px;
   }
@@ -68,6 +75,7 @@ html {
   margin: 40px 50px;
   border-radius: 20px;
   box-sizing: border-box;
+  /* Media Queries */
 }
 .Lodging .LodgingCardsContainer {
   display: grid;
@@ -101,12 +109,21 @@ html {
   padding: 0 30px;
   text-align: center;
 }
-
+@media screen and (max-width: 768px) {
+  .Lodging .Lodging {
+    margin: 0px;
+  }
+  .Lodging .LodgingCardsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer {
   background-color: black;
   padding: 2px 0;
   text-align: center;
   color: #fff;
+  /* Media Queries */
 }
 .footer .footer_logo {
   padding-top: 25px;
@@ -120,13 +137,13 @@ html {
   font-size: 11px;
   padding-bottom: 5px;
 }
-
 .BannerContainer {
   display: flex;
   max-width: 100%;
   padding: 0 50px;
   box-sizing: border-box;
   position: relative;
+  /* Media Queries */
 }
 .BannerContainer .homePageBanner {
   width: 100%;
@@ -149,6 +166,9 @@ html {
   top: 30%;
   width: 100%;
 }
+.BannerContainer .break-point::after {
+  content: "";
+}
 .BannerContainer .BannerText {
   transform: translate(-50%, -50%);
   text-align: center;
@@ -159,7 +179,18 @@ html {
   font-size: 30px;
   font-weight: bold;
 }
-
+@media screen and (max-width: 768px) {
+  .BannerContainer .BannerContainer {
+    padding: 0 15px;
+  }
+  .BannerContainer .break-point::after {
+    content: "\a"; /* Ajoute un saut de ligne */
+    white-space: pre; /* Nécessaire pour que le saut de ligne soit pris en compte */
+  }
+  .BannerContainer .BannerText {
+    text-align: left;
+  }
+}
 .about-content {
   padding: 0 110px;
 }
@@ -264,6 +295,7 @@ html {
 .lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle {
   color: rgba(224, 40, 40, 0.79);
   font-size: 40px;
+  margin: 0;
 }
 .lodgingFormColumns .lodgingFormColumn2 {
   background-color: pink;

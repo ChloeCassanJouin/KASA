@@ -3,6 +3,7 @@ import collapseArrow from '../assets/Images/collapse-arrow.svg';
 
 export default function Lodgingform({ data }) {
   console.log(data)
+  
     return (
       <main>
         <section className='lodgingFormColumns'>

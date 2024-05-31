@@ -29,6 +29,10 @@
         width: 100%;
     }
 
+    .break-point::after {
+        content: '';
+      }
+
     .BannerText {
         transform: translate(-50%, -50%);
         text-align: center;
@@ -39,4 +43,29 @@
         font-size: 30px;
         font-weight: bold;
     }
+
+     /* Media Queries */
+
+     @media (max-width: 1200px) {
+    }
+
+    @media screen and (max-width: 768px) {
+        .BannerContainer {
+            padding: 0 15px;
+        }
+        .break-point::after {
+            content: '\A'; /* Ajoute un saut de ligne */
+            white-space: pre; /* Nécessaire pour que le saut de ligne soit pris en compte */
+          }
+
+          .BannerText {
+            text-align: left;
+        }
+
+
+    
+}
+
+@media screen and (max-width: 480px) {
+}
 }

@@ -42,5 +42,23 @@
                 }
             }
         }
+ /* Media Queries */
+
+    @media (max-width: 1200px) {
     }
 
+    @media screen and (max-width: 768px) {
+        .Lodging {
+            margin: 0px;
+        }
+
+        .LodgingCardsContainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    @media screen and (max-width: 480px) {
+    }
+}
+}
