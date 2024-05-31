@@ -1,0 +1,247 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.header {
+  padding: 20px 50px 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .LogoHeader {
+  height: 35px;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+.header nav ul li {
+  margin-right: 15px;
+}
+.header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  .logo img {
+    max-width: 100px;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+  .nav ul li {
+    margin: 10px 0;
+  }
+}
+.Lodging {
+  padding: 30px;
+  background-color: rgba(247, 244, 244, 0.938);
+  margin: 40px 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.Lodging .LodgingCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.Lodging .LodgingCardsContainer a {
+  text-decoration: none;
+  color: white;
+}
+.Lodging .LodgingCardsContainer a .LodgingCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 6px rgba(229, 117, 117, 0.848);
+  cursor: pointer;
+}
+.Lodging .LodgingCardsContainer a img {
+  width: 100%;
+  height: 200px;
+}
+.Lodging .LodgingCardsContainer a .LodgingTitleContainer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background: linear-gradient(rgba(224, 40, 40, 0.79), rgba(106, 0, 0, 0.96));
+}
+.Lodging .LodgingCardsContainer a .LodgingTitleContainer .LodgingTitle {
+  margin: 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+  padding: 2px 0;
+  text-align: center;
+  color: #fff;
+}
+.footer .footer_logo {
+  padding-top: 25px;
+  padding-bottom: 8px;
+}
+.footer .LogoFooter {
+  height: 20px;
+}
+.footer p {
+  text-align: center;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+.BannerContainer {
+  display: flex;
+  max-width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+.BannerContainer .homePageBanner {
+  width: 100%;
+  max-width: 100%;
+  height: 8em;
+  border-radius: 30px;
+  filter: brightness(50%);
+  box-shadow: 0px 4px 6px rgb(245, 239, 239);
+}
+.BannerContainer .aboutBanner {
+  width: 100%;
+  max-width: 100%;
+  height: 10em;
+  border-radius: 30px;
+  filter: brightness(80%);
+}
+.BannerContainer .BannerTextContainer {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 100%;
+}
+.BannerContainer .BannerText {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: auto;
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about-content {
+  padding: 0 110px;
+}
+.about-content .accordion {
+  margin: 20px 0;
+  background-color: rgba(224, 40, 40, 0.79);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.about-content .accordion-title {
+  background: rgba(224, 40, 40, 0.79);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-content .accordion-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+.about-content .accordion-title .accordion-arrow img {
+  width: 1.5rem;
+  transition: transform 0.3s ease;
+  color: white;
+}
+.about-content .accordion-title .accordion-arrow .rotate {
+  transform: rotate(-180deg);
+}
+.about-content .accordion-content {
+  padding: 15px;
+  background: rgb(245, 239, 239);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.about-content .accordion-content.open {
+  max-height: 200px;
+  padding: 15px;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+@media (max-width: 768px) {
+  .about-content .accordion-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-content .accordion-title .accordion-arrow img {
+    align-self: flex-end;
+  }
+  .about-content .accordion-content {
+    padding: 10px;
+  }
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorContainer .errorNumber {
+  color: rgba(224, 40, 40, 0.79);
+  font-size: 80px;
+  font-weight: bold;
+  margin: 40px;
+}
+.errorContainer .errorText1 {
+  color: rgba(224, 40, 40, 0.79);
+  margin-bottom: 40px;
+}
+.errorContainer .errorText2 {
+  margin-bottom: 60px;
+  font-size: 6px;
+  color: black;
+}
+
+/*# sourceMappingURL=ss.map */

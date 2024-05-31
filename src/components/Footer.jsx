@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logoFooter from '../assets/Images/logoFooter.png'; // Assurez-vous d'avoir le logo dans le dossier assets
 
 const Footer = () => {
