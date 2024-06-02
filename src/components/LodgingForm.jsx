@@ -5,40 +5,88 @@ export default function Lodgingform({ data }) {
   console.log(data)
   
     return (
-      <main>
+<div>
         <section className='lodgingFormColumns'>
           <div className='lodgingFormColumn1'>
-            <p className='lodgingFormTitle'>TITRE DU LOGEMENT KASA</p>
-            <p>Lieu du logement Kasa</p>
+            <p className='lodgingFormTitle'>TITLE</p>
+            <p>location</p>
             <ul>
-              <li>TAGS</li>
+              <li>TAG1</li>
+              <li>TAG2</li>
+              <li>TAG3</li>
             </ul>
           </div>
           <div className='lodgingFormColumn2'>
-            <p className='lodgingFormOwner'>propriétaire</p>
-            <p>Etoiles</p>
+            <p className='lodgingFormOwner'>HOST</p>
+            <p>étoiles</p>
           </div>
         </section>
         <section className='lodgingAccordionContainer'>
           <div>
-            <div className='lodgingAccordion1'>
-              <p>titre1</p>
+            <div className='lodgingAccordion'>
+              <p>Description</p>
               <img src={collapseArrow} alt="collapse arrow"></img>
             </div>
             <div>
-              <p>Contenu accordion</p>
+              <p>blablabla</p>
             </div>
           </div>
           <div>
-            <div className='lodgingAccordion2'>
-            <p>titre2</p>
+            <div className='lodgingAccordion'>
+            <p>Equipements</p>
               <img src={collapseArrow} alt="collapse arrow"></img>
             </div>
             <div>
-              <p>Contenu accordion</p>
+            <ul>
+              <li>blabla</li>
+              <li>blabla</li>
+              <li>blabla</li>
+            </ul>
             </div>
           </div>
         </section>
-      </main>
+        </div>
     );
   }
+
+      /*<div>
+        <section className='lodgingFormColumns'>
+          <div className='lodgingFormColumn1'>
+            <p className='lodgingFormTitle'>{data.title}</p>
+            <p>{data.location}</p>
+            <ul>
+            {data.tags.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </ul>
+          </div>
+          <div className='lodgingFormColumn2'>
+            <p className='lodgingFormOwner'>{data.host.name}</p>
+            <p>{data.rating} étoiles</p>
+          </div>
+        </section>
+        <section className='lodgingAccordionContainer'>
+          <div>
+            <div className='lodgingAccordion'>
+              <p>Description</p>
+              <img src={collapseArrow} alt="collapse arrow"></img>
+            </div>
+            <div>
+              <p>{data.description}</p>
+            </div>
+          </div>
+          <div>
+            <div className='lodgingAccordion'>
+            <p>Equipements</p>
+              <img src={collapseArrow} alt="collapse arrow"></img>
+            </div>
+            <div>
+               <ul>
+              {data.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+            </div>
+          </div>
+        </section>
+        </div>*/

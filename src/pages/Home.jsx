@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import Lodging from './Lodging';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { fetchLibraryData } from '../assets/Datas/API';
 import GalleryHomePage from '../components/GalleryHomePage';
-import Lodging from './Lodging';
+
+
 
 export default function Home() {
-  const [data, setData] = useState([]); 
+  const [data, setData] = useState([]);
+  console.log("Data in Home component:", data);
 
   useEffect(() => {
-    async function getData() {
-      const libraryData = await fetchLibraryData();
-      setData(libraryData);
+    async function fetchData() {
+      try {
+        const libraryData = await fetchLibraryData();
+        setData(libraryData);
+      } catch (error) {
+        console.error('Error fetching library data:', error);
+      }
     }
-    getData(); 
+    fetchData();
   }, []);
 
-  console.log("Data in Home:", data); 
-
   return (
-    <>
+    <>    
+
       <Header />
       <main>
       <div className='BannerContainer'>
@@ -30,8 +36,8 @@ export default function Home() {
       </div>
       </main>
       <GalleryHomePage data={data} />
-      <Lodging data={data} />
       <Footer />
     </>
   );
 }
+

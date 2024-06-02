@@ -23,12 +23,7 @@ export default function Carousel({ data }) {
   return (
     <section className='carouselContainer'>
       <p>CAROUSEL</p>
-    </section>
-  );
-}
-
-/*<div className='carousel-container'>
-        <div className='carousel-slide'>
+      {/*</section><div className='carousel-slide'>
           <img src={data[slideIndex].cover} alt={data[slideIndex].title} />
           <div className='LodgingTitleContainer'>
             <p className='LodgingTitle'>{data[slideIndex].title}</p>
@@ -36,4 +31,7 @@ export default function Carousel({ data }) {
         </div>
         <button className='prev-button' onClick={prevSlide}>Previous</button>
         <button className='next-button' onClick={nextSlide}>Next</button>
-      </div>*/
+  </div>*/}
+    </section>
+  );
+}
