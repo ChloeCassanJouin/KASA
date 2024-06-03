@@ -19,9 +19,9 @@ export default function Accordion({ title, content }) {
         </div>
       </div>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
-          <p>{content}</p>
-        </div>
+        <p>{content}</p>
       </div>
+    </div>
     );
   }
 

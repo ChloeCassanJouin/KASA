@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Accordion from "../components/Accordion"
+import AboutAccordion from "../components/AboutAccordion"
 import sections from '../assets/Datas/aboutCategoryText.json';
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
         </div>
         <div className='about-content'>
             {sections.map((section, index) => (
-              <Accordion key={index} title={section.title} content={section.content} />
+              <AboutAccordion key={index} title={section.title} content={section.content} />
             ))}
         </div>
       </main>

@@ -5,7 +5,7 @@ export default function Lodgingform({ data }) {
   console.log(data)
   
     return (
-<div>
+      <div>
         <section className='lodgingFormColumns'>
           <div className='lodgingFormColumn1'>
             <p className='lodgingFormTitle'>TITLE</p>
@@ -22,30 +22,34 @@ export default function Lodgingform({ data }) {
           </div>
         </section>
         <section className='lodgingAccordionContainer'>
-          <div>
+          <div className='lodgingAccordionColumn'>
             <div className='lodgingAccordion'>
-              <p>Description</p>
-              <img src={collapseArrow} alt="collapse arrow"></img>
+              <p className='lodgingAccordion-title'>Description</p>
+              <div className='lodgingAccordionArrow'>
+                <img src={collapseArrow} alt="collapse arrow"></img>
+              </div>
             </div>
             <div>
               <p>blablabla</p>
             </div>
           </div>
-          <div>
+          <div className='lodgingAccordionColumn'>
             <div className='lodgingAccordion'>
-            <p>Equipements</p>
-              <img src={collapseArrow} alt="collapse arrow"></img>
+              <p className='lodgingAccordion-title'>Equipements</p>
+              <div className='lodgingAccordionArrow'>
+                <img src={collapseArrow} alt="collapse arrow"></img>
+              </div>
             </div>
             <div>
-            <ul>
-              <li>blabla</li>
-              <li>blabla</li>
-              <li>blabla</li>
-            </ul>
+              <ul>
+                <li>blabla</li>
+                <li>blabla</li>
+                <li>blabla</li>
+              </ul>
             </div>
           </div>
         </section>
-        </div>
+      </div>
     );
   }
 

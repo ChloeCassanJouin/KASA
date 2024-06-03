@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Lodging from './Lodging';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { fetchLibraryData } from '../assets/Datas/API';
