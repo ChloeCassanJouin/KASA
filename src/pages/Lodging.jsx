@@ -7,7 +7,7 @@ import LodgingForm from '../components/LodgingForm';
 
 export default function Lodging() {
   const [data, setData] = useState([]);
-  console.log("Data in Home component:", data);
+  console.log("Data in Lodging component:", data);
 
   useEffect(() => {
     async function fetchData() {
