@@ -51,19 +51,17 @@
 
     @media screen and (max-width: 768px) {
         .BannerContainer {
-            padding: 0 15px;
+            background-color: red;
         }
+
         .break-point::after {
-            content: '\A'; /* Ajoute un saut de ligne */
-            white-space: pre; /* Nécessaire pour que le saut de ligne soit pris en compte */
+            content: '\A'; 
+            white-space: pre; 
           }
 
           .BannerText {
             text-align: left;
-        }
-
-
-    
+        }  
 }
 
 @media screen and (max-width: 480px) {

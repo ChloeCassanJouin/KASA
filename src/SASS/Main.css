@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -188,11 +187,11 @@ html {
 }
 @media screen and (max-width: 768px) {
   .BannerContainer .BannerContainer {
-    padding: 0 15px;
+    background-color: red;
   }
   .BannerContainer .break-point::after {
-    content: "\a"; /* Ajoute un saut de ligne */
-    white-space: pre; /* Nécessaire pour que le saut de ligne soit pris en compte */
+    content: "\a";
+    white-space: pre;
   }
   .BannerContainer .BannerText {
     text-align: left;
