@@ -6,7 +6,6 @@
 
     .footer_logo{
       padding-top: 25px;
-      padding-bottom: 8px;
     }
 
     .LogoFooter{
@@ -18,16 +17,19 @@
       font-size: 11px;
       padding-bottom: 5px;
     }
+}
 
 /* Media Queries */
 
-    @media (max-width: 1200px) {
-  }
+
 
   @media screen and (max-width: 768px) {
+    .footer_logo{
+      padding-top: 40px;
+    }
+    p {
+      padding: 0 130px 30px 130px;
+    }
   }
 
 
-  @media screen and (max-width: 480px) {
-  }
-}

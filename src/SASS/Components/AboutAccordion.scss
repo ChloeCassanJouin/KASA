@@ -55,22 +55,28 @@
     }
   }
   }
+}
 
   // Media queries for responsiveness
   @media (max-width: 768px) {
     .accordion-title {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
+      padding: 0px;
+    }
 
       .accordion-arrow {
         img {
           align-self: flex-end;
         }
       }
-    }
-
-    .accordion-content {
-      padding: 10px;
-    }
+    
+      .about-content {
+        padding: 0 15px;
+      }
+    
+      p {
+        padding: 0px;
+      }
   }
-}
+
