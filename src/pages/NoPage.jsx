@@ -8,7 +8,7 @@ export default function NoPage() {
       <Header />
       <div className='errorContainer'>
         <p className='errorNumber'>404</p>
-        <p className='errorText1'>Oups! La page que vous demandez n'existe pas.</p>
+        <p className='errorText1'>Oups! La page que <span class="break"> vous demandez n'existe pas.</span></p>
         <a href="/home" className='errorText2'>Retourner sur la page d'accueil</a>
       </div>
       <Footer />

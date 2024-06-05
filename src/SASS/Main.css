@@ -119,6 +119,7 @@ html {
 @media screen and (max-width: 768px) {
   .Lodging {
     margin: 20px 15px;
+    padding: 0;
   }
   .Lodging .LodgingCardsContainer {
     display: flex;
@@ -219,7 +220,7 @@ html {
   background-color: rgba(224, 40, 40, 0.79);
   border-radius: 5px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
 }
 .about-content .accordion-title {
   background: rgba(224, 40, 40, 0.79);
@@ -246,7 +247,7 @@ html {
 .about-content .accordion-content {
   padding: 15px;
   background: rgb(245, 239, 239);
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -366,10 +367,20 @@ html {
 }
 .errorContainer .errorText2 {
   margin-bottom: 60px;
-  font-size: 6px;
+  font-size: 10px;
   color: black;
 }
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .errorText1 {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .errorText1 .break {
+    display: block;
+  }
+}
 .carouselContainer {
   background-color: rgba(247, 244, 244, 0.938);
   margin: 0 50px;
