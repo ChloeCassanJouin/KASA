@@ -9,14 +9,17 @@ import LodgingForm from '../components/LodgingForm';
 export default function Lodging() {
   const { id } = useParams();
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const libraryData = await fetchLibraryData();
         setData(libraryData);
+        setIsLoading(false);
       } catch (error) {
         console.error('Error fetching library data:', error);
+        setIsLoading(false);
       }
     }
     fetchData();
@@ -24,14 +27,20 @@ export default function Lodging() {
 
   const selectedLodging = data.find(lodging => lodging.id === id);
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       <Header />
-      <Carousel />
       {selectedLodging ? (
-        <LodgingForm data={selectedLodging} />
+        <>
+          <Carousel pictures={selectedLodging.pictures} /> {/* Pass the pictures array */}
+          <LodgingForm data={selectedLodging} />
+        </>
       ) : (
-        <p>Loading...</p>
+        <p>Lodging not found</p>
       )}
       <Footer />
     </>

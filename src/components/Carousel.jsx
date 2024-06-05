@@ -1,37 +1,27 @@
 import React, { useState } from 'react';
 
-export default function Carousel({ data }) {
-  console.log(data)
-  /*const [slideIndex, setSlideIndex] = useState(0);
+export default function Carousel({ pictures }) { // Change the prop name to pictures
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  if (!pictures || pictures.length === 0) {
+    return <p>No images available</p>;
+  }
 
   function nextSlide() {
-    if (slideIndex < data.length - 1) {
-      setSlideIndex(slideIndex + 1);
-    } else {
-      setSlideIndex(0);
-    }
+    setSlideIndex((slideIndex + 1) % pictures.length);
   }
 
   function prevSlide() {
-    if (slideIndex > 0) {
-      setSlideIndex(slideIndex - 1);
-    } else {
-      setSlideIndex(data.length - 1);
-    }
-  }*/
+    setSlideIndex((slideIndex - 1 + pictures.length) % pictures.length);
+  }
 
   return (
     <section className='carouselContainer'>
-      <p>CAROUSEL</p>
-      {/*</section><div className='carousel-slide'>
-          <img src={data[slideIndex].cover} alt={data[slideIndex].title} />
-          <div className='LodgingTitleContainer'>
-            <p className='LodgingTitle'>{data[slideIndex].title}</p>
-          </div>
-        </div>
-        <button className='prev-button' onClick={prevSlide}>Previous</button>
-        <button className='next-button' onClick={nextSlide}>Next</button>
-  </div>*/}
+      <div className='carousel-slide'>
+        <img src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} /> {/* Use pictures array */}
+      </div>
+      <button className='prev-button' onClick={prevSlide}>Previous</button>
+      <button className='next-button' onClick={nextSlide}>Next</button>
     </section>
   );
 }

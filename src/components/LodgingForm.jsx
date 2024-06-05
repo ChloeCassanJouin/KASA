@@ -2,7 +2,7 @@ import React from 'react';
 import collapseArrow from '../assets/Images/collapse-arrow.svg';
 
 export default function Lodgingform({ data }) {
-  console.log("je suis dans lodging", data)
+
   
     return (
       <div>
