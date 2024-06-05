@@ -18,7 +18,7 @@ export default function Carousel({ pictures }) { // Change the prop name to pict
   return (
     <section className='carouselContainer'>
       <div className='carousel-slide'>
-        <img src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} /> {/* Use pictures array */}
+        <img className='carouselPictures' src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} /> {/* Use pictures array */}
       </div>
       <button className='prev-button' onClick={prevSlide}>Previous</button>
       <button className='next-button' onClick={nextSlide}>Next</button>

@@ -388,6 +388,11 @@ html {
   box-sizing: border-box;
   height: 200px;
 }
+.carouselContainer .carouselPictures {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
 
 .lodgingFormColumns {
   margin: 20px 50px;
