@@ -1,6 +1,6 @@
 export const fetchLibraryData = async () => {
   try {
-    const response = await fetch('library.json');
+    const response = await fetch('/library.json');
     console.log("RESPONSE", response)
     if (!response.ok){
       throw new Error("Erreur lors de la requête_api.jsx");

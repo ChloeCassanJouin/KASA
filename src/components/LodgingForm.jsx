@@ -2,23 +2,23 @@ import React from 'react';
 import collapseArrow from '../assets/Images/collapse-arrow.svg';
 
 export default function Lodgingform({ data }) {
-  console.log(data)
+  console.log("je suis dans lodging", data)
   
     return (
       <div>
         <section className='lodgingFormColumns'>
           <div className='lodgingFormColumn1'>
-            <p className='lodgingFormTitle'>TITLE</p>
-            <p>location</p>
+            <p className='lodgingFormTitle'>{data.title}</p>
+            <p>{data.location}</p>
             <ul>
-              <li>TAG1</li>
-              <li>TAG2</li>
-              <li>TAG3</li>
-            </ul>
+            {data.tags.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </ul>
           </div>
           <div className='lodgingFormColumn2'>
-            <p className='lodgingFormOwner'>HOST</p>
-            <p>étoiles</p>
+            <p className='lodgingFormOwner'>{data.host.name}</p>
+            <p>{data.rating} étoiles</p>
           </div>
         </section>
         <section className='lodgingAccordionContainer'>
@@ -30,7 +30,7 @@ export default function Lodgingform({ data }) {
               </div>
             </div>
             <div>
-              <p>blablabla</p>
+              <p>{data.description}</p>
             </div>
           </div>
           <div className='lodgingAccordionColumn'>
@@ -41,11 +41,11 @@ export default function Lodgingform({ data }) {
               </div>
             </div>
             <div>
-              <ul>
-                <li>blabla</li>
-                <li>blabla</li>
-                <li>blabla</li>
-              </ul>
+            <ul>
+              {data.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
             </div>
           </div>
         </section>
