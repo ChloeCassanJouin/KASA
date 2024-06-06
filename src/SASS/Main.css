@@ -40,6 +40,7 @@ html {
 }
 .header nav ul a {
   text-decoration: none;
+  text-transform: lowercase;
   color: black;
   font-size: 15px;
 }
@@ -52,6 +53,9 @@ html {
   .header {
     padding: 20px 15px 20px 15px;
     max-width: 100%;
+  }
+  .header .header__nav .nav-link {
+    text-transform: uppercase;
   }
   .header .logo img {
     max-width: 100px;
