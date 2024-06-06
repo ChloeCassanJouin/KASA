@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -19,7 +20,7 @@ html {
 }
 
 .header {
-  padding: 20px 50px 20px 50px;
+  padding: 10px 50px 10px 50px;
   display: flex;
   justify-content: space-between;
   overflow-x: hidden;
@@ -289,69 +290,80 @@ html {
 }
 .lodgingAccordionContainer .lodgingAccordionColumn {
   width: 48%;
+  transition: all 0.6s ease;
 }
-.lodgingAccordionContainer .lodgingAccordion {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion {
   background-color: rgba(224, 40, 40, 0.79);
   border-radius: 5px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
   display: flex;
   gap: 150px;
   justify-content: space-between;
   padding: 0 10px;
   cursor: pointer;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-title {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordion-title {
   color: white;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-title h2 {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordion-title h2 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-title .lodgingAccordionArrow {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordionArrow {
   display: flex;
   align-items: center;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-title .lodgingAccordionArrow img {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordionArrow img {
   width: 1.5rem;
   transition: transform 0.3s ease;
   color: white;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-title .lodgingAccordionArrow .rotate {
+.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordionArrow img .rotate {
   transform: rotate(-180deg);
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-content {
+.lodgingAccordionContainer .lodgingAccordionColumn-content {
   padding: 15px;
   background: rgb(245, 239, 239);
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
   overflow: hidden;
   max-height: 0;
   opacity: 0;
   visibility: hidden;
   display: none;
 }
-.lodgingAccordionContainer .lodgingAccordion .lodgingAccordion-content.open {
+.lodgingAccordionContainer .lodgingAccordionColumn-content.open {
   max-height: 200px;
   padding: 15px;
   opacity: 1;
   visibility: visible;
   display: block;
 }
+
 @media (max-width: 768px) {
-  .lodgingAccordionContainer .accordion-title {
+  .lodgingAccordionContainer {
+    flex-direction: column;
+  }
+  .lodgingAccordionContainer .lodgingAccordionColumn {
+    width: 100%;
+  }
+  .lodgingAccordion {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
   }
-  .lodgingAccordionContainer .accordion-title .accordion-arrow img {
+  .lodgingAccordion .lodgingAccordionArrow {
     align-self: flex-end;
   }
-  .lodgingAccordionContainer .accordion-content {
+  .lodgingAccordion .lodgingAccordionArrow img {
+    align-self: flex-end;
+  }
+  .lodgingAccordion-content {
     padding: 10px;
   }
 }
-
 .errorContainer {
   display: flex;
   flex-direction: column;
@@ -390,26 +402,30 @@ html {
   margin: 0 50px;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 300px;
+  height: 250px;
 }
 .carouselContainer .carousel-slide {
   position: relative;
 }
 .carouselContainer .carouselPictures {
-  height: 300px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
 .carouselContainer .prev-button, .carouselContainer .next-button {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
   padding: 0;
+}
+.carouselContainer .prev-button img, .carouselContainer .next-button img {
+  width: 30px;
+  height: auto;
 }
 .carouselContainer .prev-button {
   left: 10px;
@@ -419,18 +435,97 @@ html {
 }
 
 .lodgingFormColumns {
-  margin: 20px 50px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  padding: 0px 50px;
 }
-.lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle {
-  color: rgba(224, 40, 40, 0.79);
-  font-size: 40px;
-  margin: 0;
+.lodgingFormColumns .lodgingFormColumn1, .lodgingFormColumns .lodgingFormColumn2 {
+  flex: 1;
 }
-.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwner {
+.lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle, .lodgingFormColumns .lodgingFormColumn2 .lodgingFormTitle {
+  font-size: 24px;
+  margin: 15px 0px 0px;
+  font-weight: bold;
   color: rgba(224, 40, 40, 0.79);
+}
+.lodgingFormColumns .lodgingFormColumn1 .lodgingFormLocation, .lodgingFormColumns .lodgingFormColumn2 .lodgingFormLocation {
+  margin: 0px;
+  font-size: 12px;
+}
+.lodgingFormColumns .lodgingFormColumn1 .StarRatingContainer, .lodgingFormColumns .lodgingFormColumn2 .StarRatingContainer {
+  margin-top: 35px;
+}
+.lodgingFormColumns .lodgingFormColumn1 .StarRatingContainer .star-rating, .lodgingFormColumns .lodgingFormColumn2 .StarRatingContainer .star-rating {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.lodgingFormColumns .lodgingFormColumn1 .StarRatingContainer .star-rating .star, .lodgingFormColumns .lodgingFormColumn2 .StarRatingContainer .star-rating .star {
+  width: 20px; /* Ajustez la taille des étoiles selon vos besoins */
+  height: 20px;
+}
+.lodgingFormColumns .lodgingFormColumn1 ul, .lodgingFormColumns .lodgingFormColumn2 ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 10px;
+}
+.lodgingFormColumns .lodgingFormColumn1 ul li, .lodgingFormColumns .lodgingFormColumn2 ul li {
+  background-color: rgba(224, 40, 40, 0.79);
+  border-radius: 15px;
+  padding: 2px 20px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 10px;
+}
+.lodgingFormColumns .lodgingFormColumn2 {
+  text-align: right;
+}
+.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 8px 0px 0px;
+  padding-left: 220px;
+}
+.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer .lodgingFormOwnerAvatar {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border-radius: 50%;
+}
+.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer .lodgingFormOwner {
+  color: rgba(224, 40, 40, 0.79);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .lodgingFormColumns {
+    flex-direction: column;
+  }
+  .lodgingFormColumns .lodgingFormColumn1, .lodgingFormColumns .lodgingFormColumn2 {
+    text-align: left;
+    padding: 0;
+  }
+  .lodgingFormColumns .lodgingFormColumn1 ul, .lodgingFormColumns .lodgingFormColumn2 ul {
+    text-align: left;
+  }
+  .lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion {
+    padding: 10px;
+  }
+  .lodgingAccordionContainer .lodgingAccordionColumn > div {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .lodgingFormColumns {
+    padding: 10px;
+  }
+  .lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle, .lodgingFormColumns .lodgingFormColumn2 .lodgingFormTitle {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
