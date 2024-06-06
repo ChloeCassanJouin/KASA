@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ArrowLeft from '../assets/Images/slideshow-arrow_left.svg'; 
+import ArrowRight from '../assets/Images/slideshow-arrow_right.svg'; 
 
 export default function Carousel({ pictures }) { // Change the prop name to pictures
   const [slideIndex, setSlideIndex] = useState(0);
@@ -17,11 +19,15 @@ export default function Carousel({ pictures }) { // Change the prop name to pict
 
   return (
     <section className='carouselContainer'>
-      <div className='carousel-slide'>
-        <img className='carouselPictures' src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} /> {/* Use pictures array */}
-      </div>
-      <button className='prev-button' onClick={prevSlide}>Previous</button>
-      <button className='next-button' onClick={nextSlide}>Next</button>
-    </section>
+    <div className='carousel-slide'>
+      <img className='carouselPictures' src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} />
+    </div>
+    <button className='prev-button' onClick={prevSlide}>
+      <img src={ArrowLeft} alt="Previous" />
+    </button>
+    <button className='next-button' onClick={nextSlide}>
+      <img src={ArrowRight} alt="Next" />
+    </button>
+  </section>
   );
 }

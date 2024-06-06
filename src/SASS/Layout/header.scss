@@ -2,6 +2,7 @@
     padding: 20px 50px 20px 50px;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
     
     .header__logo {
       display: flex;
@@ -17,9 +18,8 @@
       ul {
         list-style: none;
         display: flex;
-        gap: 1em;
-        li {
-          margin-right: 15px;
+        gap: 2em;
+
           a {
             text-decoration: none;
             color: black;
@@ -32,29 +32,24 @@
         }
       }
     }
-  }
+  
 
 /* Media Queries */
-  @media (max-width: 1200px) {
-    .header {
-      padding: 15px;
-    }
-  }
+
+
 
   @media screen and (max-width: 768px) {
-    .logo {
-      img {
-        max-width: 150px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 480px) {
+    .header{
+      padding: 20px 15px 20px 15px;
+      max-width: 100%;
+    
     .logo {
       img {
         max-width: 100px;
       }
     }
+  }
+  }
 
     .nav {
       ul {
@@ -65,4 +60,4 @@
         }
       }
     }
-  }
+  

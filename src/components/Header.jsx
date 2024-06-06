@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoHeader from '../assets/Images/logoHeader.svg'; // Assurez-vous d'avoir le logo dans le dossier assets
+import logoHeader from '../assets/Images/logoHeader.svg'; 
 
 const Header = () => {
     return (

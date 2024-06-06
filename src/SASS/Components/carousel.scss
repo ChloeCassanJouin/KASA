@@ -1,13 +1,38 @@
 .carouselContainer {
+    position: relative;
     background-color: rgba(247, 244, 244, 0.938);
     margin: 0 50px;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 200px;
+    height: 300px;
+
+    .carousel-slide {
+        position: relative;
+    }
 
     .carouselPictures{
         height: 300px;
         width: 100%;
         object-fit: cover;
+        border-radius: 10px;
     }
+
+    .prev-button, .next-button {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+    }
+
+    .prev-button {
+        left: 10px; 
+      }
+
+      .next-button {
+        right: 10px; 
+      }
 }
