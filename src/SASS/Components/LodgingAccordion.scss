@@ -15,11 +15,12 @@
       transition: all 0.6s ease;
       display: flex;
       justify-content: space-between;
-      padding: 0 10px;
+      padding: 0 5px;
       cursor: pointer;
 
       .lodgingAccordion-title {
         color: white;
+        margin: 5px;
       }
 
       .lodgingAccordionArrow {
@@ -41,7 +42,7 @@
     .lodgingAccordionContentContainer{
       padding: 15px;
       font-size: 14px;
-      height: 160px;
+      height: auto;
       border-radius: 5px;
       background: rgb(245, 239, 239);
       transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
@@ -60,10 +61,14 @@
   .lodgingAccordionContainer {
     margin: 20px 15px 20px 15px;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 
     .lodgingAccordionColumn {
       width: 100%;
+    }
+
+    .lodgingAccordionContentContainer{
+      height: 0px;
     }
   }
 }

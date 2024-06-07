@@ -45,6 +45,11 @@
 @media screen and (max-width: 768px) {
     .carouselContainer {
       margin: 0px 15px;
+
+      .prev-button, .next-button {
+        img {
+          width: 12px;
+        }
+      }
     }
-    
   }
