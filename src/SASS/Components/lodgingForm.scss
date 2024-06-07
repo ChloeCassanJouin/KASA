@@ -2,10 +2,13 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 50px;
-  
-    .lodgingFormColumn1, .lodgingFormColumn2 {
-      flex: 1;
-  
+    flex-direction: row;
+
+    .lodgingFormColumn1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
       .lodgingFormTitle {
         font-size: 24px;
         margin: 15px 0px 0px;
@@ -18,21 +21,6 @@
         font-size: 12px;
       }
 
-      .StarRatingContainer {
-        margin-top: 35px;
-
-        .star-rating {
-            display: flex;
-            gap: 5px;
-            justify-content: flex-end;
-          
-            .star {
-              width: 20px; /* Ajustez la taille des étoiles selon vos besoins */
-              height: 20px;
-            }
-          }
-      }
-  
       ul {
         list-style: none;
         padding: 0px;
@@ -50,70 +38,58 @@
         }
       }
     }
-  
+
+      
+    }
+
     .lodgingFormColumn2 {
-      text-align: right;
-  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
       .lodgingFormOwnerContainer {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 10px;
-        margin: 8px 0px 0px;
-        padding-left: 220px;
+        gap: 5px;
+        margin: 2px 0px 0px;
+
+        .lodgingFormOwner {
+          width: 50px;
+
+          .lodgingFormOwnerName {
+            color: rgba(224, 40, 40, 0.79);
+          }
+        }
   
         .lodgingFormOwnerAvatar {
           width: 40px; 
           height: 40px;
           background-color: grey;
           border-radius: 50%;
-
         }
-  
-        .lodgingFormOwner {
-          color: rgba(224, 40, 40, 0.79);
+      }
+     
+      .StarRatingContainer {
+
+        .star-rating {
+          display: flex;
+          gap: 5px;
+          justify-content: flex-end;
+        
+          .star {
+            width: 20px; 
+            height: 20px;
+          }
         }
       }
     }
-  }
-  
+
   
   /* Media Queries */
   @media screen and (max-width: 768px) {
     .lodgingFormColumns {
-      flex-direction: column;
-  
-      .lodgingFormColumn1, .lodgingFormColumn2 {
-        text-align: left;
-        padding: 0;
-  
-        ul {
-          text-align: left;
-        }
-      }
+      padding: 0px 15px;
     }
-  
-    .lodgingAccordionContainer {
-      .lodgingAccordionColumn {
-        .lodgingAccordion {
-          padding: 10px;
-        }
-  
-        & > div {
-          padding: 10px;
-        }
-      }
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .lodgingFormColumns {
-      padding: 10px;
-  
-      .lodgingFormColumn1, .lodgingFormColumn2 {
-        .lodgingFormTitle {
-          font-size: 20px;
-        }
-      }
-    }
+    
   }

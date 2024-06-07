@@ -1,97 +1,70 @@
 .lodgingAccordionContainer {
-    margin: 0 50px 20px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  margin: 0 50px 20px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-    .lodgingAccordionColumn {
-      width: 48%;
+  .lodgingAccordionColumn {
+    width: 48%;
+    transition: all 0.6s ease;
+
+    .lodgingAccordion {
+      background-color: rgba(224, 40, 40, 0.79);
+      border-radius: 5px;
+      overflow: hidden;
       transition: all 0.6s ease;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      cursor: pointer;
 
-      .lodgingAccordion {
-        background-color: rgba(224, 40, 40, 0.79);
-        border-radius: 5px;
-        overflow: hidden;
-        transition: all 0.6s ease;
-        display: flex;
-        gap: 150px;
-        justify-content: space-between;
-        padding: 0 10px;
-        cursor: pointer;
-  
       .lodgingAccordion-title {
         color: white;
-  
-        h2 {
-          margin: 0;
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: white;
-        }
       }
-    }
-  
-    .lodgingAccordionArrow {
+
+      .lodgingAccordionArrow {
         display: flex;
         align-items: center;
+
           img {
             width: 1.5rem; 
             transition: transform 0.3s ease;
             color: white;
 
-          .rotate {
+          &.rotate {
             transform: rotate(-180deg); 
           }
         }
       }
-  
-      &-content {
-        padding: 15px;
-        background: rgb(245, 239, 239);
-        transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-        
-        &.open {
-          max-height: 200px; 
-          padding: 15px; 
-          opacity: 1;
-          visibility: visible;
-          display: block;
+    }
+
+    .lodgingAccordionContentContainer{
+      padding: 15px;
+      font-size: 14px;
+      height: 160px;
+      border-radius: 5px;
+      background: rgb(245, 239, 239);
+      transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
+
+      .lodgingAccordionContent {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
       }
     }
-    }
   }
+}
 
-
-  
     // Media queries for responsiveness
 @media (max-width: 768px) {
   .lodgingAccordionContainer {
+    margin: 20px 15px 20px 15px;
     flex-direction: column;
+    gap: 10px;
 
     .lodgingAccordionColumn {
       width: 100%;
     }
   }
-
-  .lodgingAccordion {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-
-    .lodgingAccordionArrow {
-      align-self: flex-end;
-      img {
-        align-self: flex-end;
-      }
-    }
-
-    &-content {
-      padding: 10px;
-    }
-  }
 }
+

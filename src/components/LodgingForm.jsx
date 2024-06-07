@@ -29,20 +29,27 @@ export default function Lodgingform({ data }) {
     return (
       <div>
         <section className='lodgingFormColumns'>
+
           <div className='lodgingFormColumn1'>
             <p className='lodgingFormTitle'>{data.title}</p>
             <p className='lodgingFormLocation'>{data.location}</p>
-            <ul>
-              {data.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
+            <div>
+              <ul>
+                {data.tags.map((tag, index) => (
+                  <li key={index}>{tag}</li>
+                ))}
+              </ul>
+            </div>
           </div>
+
           <div className='lodgingFormColumn2'>
             <div className='lodgingFormOwnerContainer'>
-                <p className='lodgingFormOwner'>{data.host.name}</p>
+                <div className='lodgingFormOwner'>
+                  <p className='lodgingFormOwnerName'>{data.host.name}</p>
+                </div>
                 <div className='lodgingFormOwnerAvatar'></div>
             </div>
+          
             <div className='StarRatingContainer'>
               <StarRating rating={data.rating} />
             </div>
@@ -51,17 +58,20 @@ export default function Lodgingform({ data }) {
 
 
         <section className='lodgingAccordionContainer'>
+
           <div className='lodgingAccordionColumn'>
             <div className='lodgingAccordion' onClick={() => toggleAccordion(0)}>
               <p className='lodgingAccordion-title'>Description</p>
               <div className='lodgingAccordionArrow'>
-                <img src={collapseArrow} alt="collapse arrow" className={isOpen ? 'rotate' : ''}
+                <img src={collapseArrow} alt="collapse arrow" className={openAccordion === 0 ? 'rotate' : ''}
                 />
               </div>
             </div>
-            <div className={`lodgingAccordion-content ${isOpen ? 'open' : ''}`}>
-              <p>{data.description}</p>
+            {openAccordion === 0 && (
+            <div className='lodgingAccordionContentContainer'>
+              <p className='lodgingAccordionContent'>{data.description}</p>
             </div>
+              )}
           </div>
 
           
@@ -69,16 +79,18 @@ export default function Lodgingform({ data }) {
             <div className='lodgingAccordion' onClick={() => toggleAccordion(1)}>
               <p className='lodgingAccordion-title'>Equipements</p>
               <div className='lodgingAccordionArrow'>
-                <img src={collapseArrow} alt="collapse arrow" className={openAccordion === 1 ? 'rotate' : ''} />
+                <img src={collapseArrow} alt="collapse arrow" className={openAccordion === 1 ? 'rotate' : ''}/>
               </div>
             </div>
-            <div className={`lodgingAccordion-content ${openAccordion === 1 ? 'open' : ''}`}>
-              <ul>
+            {openAccordion === 1 && (
+            <div className='lodgingAccordionContentContainer'>
+              <ul className='lodgingAccordionContent'>
                 {data.equipments.map((equipment, index) => (
                   <li key={index}>{equipment}</li>
                 ))}
               </ul>
             </div>
+            )}
           </div>
         </section>
       </div>
