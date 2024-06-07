@@ -21,6 +21,7 @@
         font-size: 1.2rem;
         font-weight: 600;
         color: white;
+        font-size: 14px;
       }
 
       .accordion-arrow {
@@ -45,6 +46,11 @@
       opacity: 0;
       visibility: hidden;
       display: none;
+      font-size: 14px;
+
+      p{
+        margin: 0;
+      }
       
       &.open {
         max-height: 200px; 

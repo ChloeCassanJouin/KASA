@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
-  font-family: "Montserrat, sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -240,6 +240,7 @@ html {
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
+  font-size: 14px;
 }
 .about-content .accordion-title .accordion-arrow img {
   width: 1.5rem;
@@ -258,6 +259,10 @@ html {
   opacity: 0;
   visibility: hidden;
   display: none;
+  font-size: 14px;
+}
+.about-content .accordion-content p {
+  margin: 0;
 }
 .about-content .accordion-content.open {
   max-height: 200px;
@@ -306,6 +311,7 @@ html {
 .lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordion-title {
   color: white;
   margin: 5px;
+  font-size: 10px;
 }
 .lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordionArrow {
   display: flex;
@@ -331,6 +337,7 @@ html {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
+  font-size: 10px;
 }
 
 @media (max-width: 768px) {
@@ -460,7 +467,7 @@ html {
   margin-right: 5px;
   margin-bottom: 5px;
   color: white;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .lodgingFormColumn2 {
