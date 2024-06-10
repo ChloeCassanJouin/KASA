@@ -1,6 +1,6 @@
 .Lodging {
     padding: 30px;
-    background-color: rgba(247, 244, 244, 0.938);
+    background-color: $quaternary-color;
     margin: 40px 50px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -10,18 +10,18 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 30px; 
 
-        a{
+        a {
             text-decoration: none;
-            color: white;
+            color: $secondary-color;
 
-            .LodgingCard{
-                background: linear-gradient(rgba(224, 40, 40, 0.79), rgb(181 13 13 / 95%));
+            .LodgingCard {
+                background: linear-gradient($primary-color, $senary-color);
                 border-radius: 5%;
-            }
+            
 
             .LodgingCard:hover {
                 transform: translateY(-5px);
-                box-shadow: 0px 4px 6px rgba(229, 117, 117, 0.848);
+                box-shadow: 0px 4px 6px $septanery-color;
                 cursor: pointer;
             }
 
@@ -31,50 +31,44 @@
                     padding: 3px 3px 3px;
                     border-radius: 5%;
                 }
+            }
 
-                .LodgingTitleContainer{
+            .LodgingTitleContainer{
+                display: flex;
+                justify-content: center;
+                height: 50px;
+                
+                border-radius: 5%;
+
+                .LodgingTitle {
+                    margin: 0;
+                    font-size: 13px;
                     display: flex;
-                    justify-content: center;
-                    height: 50px;
-                    
-                    border-radius: 5%;
+                    align-items: center;
+                    padding: 0 30px;
+                    text-align: center;
+                    padding-bottom: 9px;  
 
-                    .LodgingTitle {
-                        margin: 0;
-                        font-size: 13px;
+                    ul {
                         display: flex;
-                        align-items: center;
-                        padding: 0 30px;
-                        text-align: center;
-                        padding-bottom: 9px;  
-
-                        ul {
-                            display: flex;
-                            flex-direction: row;
-                            }
+                        flex-direction: row;
                     }
-
-                    
-                }
+                }   
             }
         }
     }
+}
         
  /* Media Queries */
+@media screen and (max-width: 768px) {
+    .Lodging {
+        margin: 20px 15px;
+        padding: 0;
+        background-color: $secondary-color;
 
-    @media screen and (max-width: 768px) {
-        .Lodging {
-            margin: 20px 15px;
-            padding: 0;
-            background-color: white;
-
-            .LodgingCardsContainer {
-                display: flex;
-                flex-direction: column;
-            }
+        .LodgingCardsContainer {
+            display: flex;
+            flex-direction: column;
         }
-
-
-    @media screen and (max-width: 480px) {
     }
 }

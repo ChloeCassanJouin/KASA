@@ -36,7 +36,7 @@ export default function Lodging() {
       <Header />
       {selectedLodging ? (
         <>
-          <Carousel pictures={selectedLodging.pictures} /> {/* Pass the pictures array */}
+          <Carousel pictures={selectedLodging.pictures} />
           <LodgingForm data={selectedLodging} />
         </>
       ) : (

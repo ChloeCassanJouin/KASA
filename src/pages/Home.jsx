@@ -3,12 +3,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { fetchLibraryData } from '../assets/Datas/API';
 import GalleryHomePage from '../components/GalleryHomePage';
-
+import homeBanner from '../assets/Images/homepage-banner.png';
 
 
 export default function Home() {
   const [data, setData] = useState([]);
   console.log("Data in Home component:", data);
+  
 
   useEffect(() => {
     async function fetchData() {
@@ -31,7 +32,7 @@ export default function Home() {
         <div className='BannerTextContainer'>
           <p className='BannerText'>Chez vous,<span className='break-point'></span> partout et ailleurs</p>
         </div>
-        <img src="./src/assets/Images/homepage-banner.png" alt="Homepage Banner" className="homePageBanner" />
+        <img src={homeBanner} alt="Homepage Banner" className="homePageBanner" />
       </div>
       </main>
       <GalleryHomePage data={data} />

@@ -13,7 +13,7 @@
         height: 8em;
         border-radius: 20px;
         filter : brightness(50%);
-        box-shadow: 0px 4px 6px rgb(245, 239, 239);
+        box-shadow: 0px 4px 6px $quaternary-color;
     }
 
     .aboutBanner {
@@ -29,44 +29,43 @@
         left: 50%;
         top: 30%;
         width: 100%;
-    }
 
-    .break-point::after {
-        content: '';
-      }
-
-    .BannerText {
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 1;
-        width: auto;
-        color: white;
-        position: absolute;
-        font-size: 30px;
-        font-weight: bold;
-
+        .break-point::after {
+            content: '';
+        }
+    
+        .BannerText {
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            width: auto;
+            color: $secondary-color;
+            position: absolute;
+            font-size: 30px;
+            font-weight: bold;
+    
+        }
     }
 }
 
-     /* Media Queries */
-
-    @media screen and (max-width: 768px) {
-        .BannerContainer {
-            padding: 0 15px;
-        
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .BannerContainer {
+        padding: 0 15px;
 
         .break-point::after {
             content: '\A'; 
             white-space: pre; 
-          }
-
-          .BannerText {
-            text-align: start;
-            font-size: 24px;
-        }  
-            p {
-            padding: 0 70px 0px 40px;
-            text-align: left;
             }
+
+        .BannerText {
+        text-align: start;
+        font-size: 24px;
+        }  
+
+        p {
+        padding: 0 70px 0px 40px;
+        text-align: left;
+        }
     }
 }

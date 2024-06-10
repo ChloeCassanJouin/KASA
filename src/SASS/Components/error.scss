@@ -4,34 +4,33 @@
     justify-content: center;
     align-items: center;
 
-
     .errorNumber {
-        color: rgba(224, 40, 40, 0.79);
+        color: $primary-color;
         font-size: 80px;
         font-weight: bold;
         margin: 40px;
     }
 
     .errorText1 {
-        color: rgba(224, 40, 40, 0.79);
+        color: $primary-color;
         margin-bottom: 40px;
     }
 
     .errorText2 {
         margin-bottom: 60px;
         font-size: 10px;
-        color: black;
+        color: $tertiary-color;
     }
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-.errorText1 {
-    padding: 0 20px;
-    text-align: center;
+    .errorText1 {
+        padding: 0 20px;
+        text-align: center;
 
-    .break {
-        display:block;
+        .break {
+            display:block;
+        }
     }
-}
 }

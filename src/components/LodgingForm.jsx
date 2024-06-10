@@ -23,7 +23,7 @@ export default function Lodgingform({ data }) {
   const [openAccordions, setOpenAccordions] = useState([false, false]);
 
   const toggleAccordion = (index, event) => {
-    event.stopPropagation(); // Prevent the event from bubbling up
+    event.stopPropagation(); 
     const clickedElement = event.target;
     if (clickedElement.closest('.lodgingAccordionArrow')) {
       setOpenAccordions(prevState => {

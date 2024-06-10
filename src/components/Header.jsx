@@ -13,10 +13,10 @@ const Header = () => {
             <nav className="header__nav">
                 <ul>
                     <li>
-                    <a href="/" className="nav-link">Accueil</a>
+                        <Link to="/" className="nav-link">Accueil</Link>
                     </li>
                     <li>
-                    <a href="/about" className="nav-link">A Propos</a>
+                        <Link to="/about" className="nav-link">A Propos</Link>
                     </li>
                 </ul>
             </nav>
@@ -25,11 +25,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-//export default function Header() {
-    //return <h1>Bienvenue sur Kasa</h1>;
-  //}
-  

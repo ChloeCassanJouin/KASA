@@ -1,109 +1,115 @@
 .lodgingFormColumns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  flex-direction: row;
+
+  .lodgingFormColumn1 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 0px 50px;
-    flex-direction: row;
-
-    .lodgingFormColumn1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    
-      .lodgingFormTitle {
-        font-size: 24px;
-        margin: 15px 0px 0px;
-        font-weight: bold;
-        color: rgba(224, 40, 40, 0.79); 
-      }
-
-      .lodgingFormLocation{
-        margin-top: 3px;
-        margin-bottom: 8px;
-        font-size: 12px;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0px;
-        margin-top: 0px;
-        margin-bottom: 8px;
   
-        li {
-          background-color: rgba(224, 40, 40, 0.79);
-          border-radius: 15px;
-          padding: 2px 20px;
-          display: inline-block;
-          margin-right: 5px;
-          margin-bottom: 5px;
-          color: white;
-          font-size: 8px;
+    .lodgingFormTitle {
+      font-size: 20px;
+      margin: 15px 0px 0px;
+      color: $primary-color; 
+    }
+
+    .lodgingFormLocation{
+      margin-top: 3px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin-top: 0px;
+      margin-bottom: 8px;
+
+      li {
+        background-color: $primary-color;
+        border-radius: 15px;
+        padding: 2px 20px;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: $secondary-color;
+        font-size: 8px;
+      }
+    }
+  }
+
+
+  .lodgingFormColumn2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .lodgingFormOwnerContainer {
+      order: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 2px 0px 0px;
+      width: 100%;
+
+      .lodgingFormOwner {
+        display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1; 
+    width: auto; 
+
+        .lodgingFormOwnerName {
+          color: $primary-color;
+          text-align: right;
+          white-space: pre-wrap; 
+          word-break: break-word;
+          width: 70px;
         }
       }
-    }
 
-      
+      .lodgingFormOwnerAvatar {
+        width: 40px; 
+        height: 40px;
+        background-color: $quinary-color;
+        border-radius: 50%;
+      }
     }
-
-    .lodgingFormColumn2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     
-      .lodgingFormOwnerContainer {
-        order: 1;
+    .StarRatingContainer {
+      order: 2;
+      margin-bottom: 8px;
+
+      .star-rating {
         display: flex;
-        align-items: center;
+        gap: 5px;
         justify-content: flex-end;
-        gap: 10px;
-        margin: 2px 0px 0px;
-
-        .lodgingFormOwner {
-          width: 50px;
-
-          .lodgingFormOwnerName {
-            color: rgba(224, 40, 40, 0.79);
-            text-align: right;
-          }
-        }
-  
-        .lodgingFormOwnerAvatar {
-          width: 40px; 
-          height: 40px;
-          background-color: grey;
-          border-radius: 50%;
-        }
-      }
-     
-      .StarRatingContainer {
-        order: 2;
-        margin-bottom: 8px;
-
-        .star-rating {
-          display: flex;
-          gap: 5px;
-          justify-content: flex-end;
-        
-          .star {
-            width: 20px; 
-            height: 20px;
-          }
+      
+        .star {
+          width: 20px; 
+          height: 20px;
         }
       }
     }
+  }
+}
 
   
-  /* Media Queries */
-  @media screen and (max-width: 768px) {
-    .lodgingFormColumns {
-      padding: 0px 15px;
-      flex-direction: column;
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .lodgingFormColumns {
+    padding: 0px 15px;
+    flex-direction: column;
 
-      .lodgingFormOwnerContainer {
-        order: 2;
-      }
+    .lodgingFormOwnerContainer {
+      order: 2;
+    }
 
-      .lodgingFormColumn2{
-        display: flex;
+    .lodgingFormColumn2{
+      display: flex;
       flex-direction: row;
 
       .lodgingFormOwnerContainer {
@@ -112,9 +118,9 @@
 
       .StarRatingContainer {
         order: 1;
-      }
-
+        align-items: center;
+        display: flex;
       }
     }
-    
   }
+}

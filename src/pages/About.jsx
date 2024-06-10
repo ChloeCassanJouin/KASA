@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AboutAccordion from "../components/AboutAccordion"
 import sections from '../assets/Datas/aboutCategoryText.json';
+import aboutBanner from '../assets/Images/about-banner.png';
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
         <div className='BannerContainer'>
           <div className='BannerTextContainer'>
           </div>
-          <img src="./src/assets/Images/about-banner.png" alt="About Banner" className="aboutBanner" />
+          <img src={aboutBanner} alt="About Banner" className="aboutBanner" />
         </div>
         <div className='about-content'>
             {sections.map((section, index) => (

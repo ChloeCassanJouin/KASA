@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ArrowLeft from '../assets/Images/slideshow-arrow_left.svg'; 
 import ArrowRight from '../assets/Images/slideshow-arrow_right.svg'; 
 
-export default function Carousel({ pictures }) { // Change the prop name to pictures
+export default function Carousel({ pictures }) { 
   const [slideIndex, setSlideIndex] = useState(0);
 
   if (!pictures || pictures.length === 0) {

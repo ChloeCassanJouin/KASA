@@ -1,55 +1,54 @@
 .carouselContainer {
-    position: relative;
-    background-color: rgba(247, 244, 244, 0.938);
-    margin: 0 50px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    height: 250px;
+  position: relative;
+  margin: 0 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 250px;
 
-    .carousel-slide {
-        position: relative;
-    }
+  .carousel-slide {
+      position: relative;
+  }
 
-    .carouselPictures{
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+  .carouselPictures{
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+  }
 
-    .prev-button, .next-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        padding: 0;
+  .prev-button, .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
 
-        img {
-            width: 30px;
-            height: auto;
-          }
-    }
+      img {
+          width: 30px;
+          height: auto;
+        }
+  }
 
-    .prev-button {
-        left: 10px; 
-      }
+  .prev-button {
+      left: 10px; 
+  }
 
-    .next-button {
-    right: 10px; 
-    }
+  .next-button {
+  right: 10px; 
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .carouselContainer {
-      margin: 0px 15px;
+  .carouselContainer {
+    margin: 0px 15px;
 
-      .prev-button, .next-button {
-        img {
-          width: 12px;
-        }
+    .prev-button, .next-button {
+      img {
+        width: 12px;
       }
     }
   }
+}
