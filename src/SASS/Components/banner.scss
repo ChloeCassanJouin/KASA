@@ -37,12 +37,12 @@
     
         .BannerText {
             transform: translate(-50%, -50%);
-            text-align: center;
+            //text-align: center;
             z-index: 1;
             width: auto;
             color: $secondary-color;
             position: absolute;
-            font-size: 30px;
+            font-size: 24px;
             font-weight: bold;
     
         }
@@ -54,19 +54,14 @@
     .BannerContainer {
         padding: 0 15px;
 
+        .BannerText {
+            padding: 0 70px 0px 40px;
+            text-align: start;
+            } 
+
         .break-point::after {
             content: '\A'; 
             white-space: pre; 
-            }
-
-        .BannerText {
-        text-align: start;
-        font-size: 24px;
-        }  
-
-        p {
-        padding: 0 70px 0px 40px;
-        text-align: left;
         }
     }
 }
