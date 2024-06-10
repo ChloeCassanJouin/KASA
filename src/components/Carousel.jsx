@@ -22,12 +22,19 @@ export default function Carousel({ pictures }) {
     <div className='carousel-slide'>
       <img className='carouselPictures' src={pictures[slideIndex]} alt={`Slide ${slideIndex}`} />
     </div>
-    <button className='prev-button' onClick={prevSlide}>
-      <img src={ArrowLeft} alt="Previous" />
-    </button>
-    <button className='next-button' onClick={nextSlide}>
-      <img src={ArrowRight} alt="Next" />
-    </button>
+    {pictures.length > 1 && (
+      <>
+        <button className='prev-button' onClick={prevSlide}>
+          <img src={ArrowLeft} alt="Previous" />
+        </button>
+        <button className='next-button' onClick={nextSlide}>
+          <img src={ArrowRight} alt="Next" />
+        </button>
+        <div className='carousel-counter'>
+          {slideIndex + 1} / {pictures.length}
+        </div>
+      </>
+    )}
   </section>
   );
 }

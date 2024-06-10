@@ -39,6 +39,17 @@
   .next-button {
   right: 10px; 
   }
+
+  .carousel-counter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 768px) {
