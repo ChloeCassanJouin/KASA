@@ -172,6 +172,7 @@ html {
   border-radius: 20px;
   filter: brightness(50%);
   box-shadow: 0px 4px 6px rgb(245, 239, 239);
+  margin-bottom: 10px;
 }
 .BannerContainer .aboutBanner {
   width: 100%;
