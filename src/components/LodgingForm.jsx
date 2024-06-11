@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import collapseArrow from '../assets/Images/collapse-arrow.svg';
 import activeStar from '../assets/Images/active-star.svg';
 import greyStar from '../assets/Images/inactive-star.svg';
 
@@ -63,40 +62,6 @@ export default function Lodgingform({ data }) {
           <div className='StarRatingContainer'>
             <StarRating rating={data.rating} />
           </div>
-        </div>
-      </section>
-
-      <section className='lodgingAccordionContainer'>
-        <div className='lodgingAccordionColumn'>
-          <div className='lodgingAccordion' onClick={(event) => toggleAccordion(0, event)}>
-            <p className='lodgingAccordion-title'>Description</p>
-            <div className='lodgingAccordionArrow'>
-              <img src={collapseArrow} alt="collapse arrow" className={openAccordions[0] ? 'rotate' : ''} />
-            </div>
-          </div>
-          {openAccordions[0] && (
-            <div className='lodgingAccordionContentContainer'>
-              <p className='lodgingAccordionContent'>{data.description}</p>
-            </div>
-          )}
-        </div>
-
-        <div className='lodgingAccordionColumn'>
-          <div className='lodgingAccordion' onClick={(event) => toggleAccordion(1, event)}>
-            <p className='lodgingAccordion-title'>Equipements</p>
-            <div className='lodgingAccordionArrow'>
-              <img src={collapseArrow} alt="collapse arrow" className={openAccordions[1] ? 'rotate' : ''} />
-            </div>
-          </div>
-          {openAccordions[1] && (
-            <div className='lodgingAccordionContentContainer'>
-              <ul className='lodgingAccordionContent'>
-                {data.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </section>
     </div>

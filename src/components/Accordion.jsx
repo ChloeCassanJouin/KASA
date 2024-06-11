@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import collapseArrow from '../assets/Images/collapse-arrow.svg';
 
-export default function AboutAccordion({ title, content }) {
+export default function Accordion({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -25,7 +25,7 @@ export default function AboutAccordion({ title, content }) {
     );
   }
 
-  AboutAccordion.propTypes = {
+ Accordion.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };

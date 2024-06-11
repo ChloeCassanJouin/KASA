@@ -1,5 +1,4 @@
-.about-content {
-  padding: 0 110px;
+.accordionContainer {
 
   .accordion {
     margin: 20px 0;
@@ -63,6 +62,17 @@
   }
 }
 
+.aboutAccordionContainer {
+  padding: 0 110px;
+}
+
+.lodgingAccordionContainer {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 // Media queries for responsiveness
 @media (max-width: 768px) {
   .accordion-title {
@@ -76,13 +86,16 @@
       }
     }
   }
-  
-  .about-content {
-    padding: 0 15px;
-
-    p {
-      padding: 0px;
-    }
-  }
 }
+  
+.lodgingAccordionContainer {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutAccordionContainer {
+  padding: 0 15px;
+}
+
 

@@ -217,17 +217,14 @@ html {
     white-space: pre;
   }
 }
-.about-content {
-  padding: 0 110px;
-}
-.about-content .accordion {
+.accordionContainer .accordion {
   margin: 20px 0;
   background-color: rgba(224, 40, 40, 0.79);
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.6s ease;
 }
-.about-content .accordion-title {
+.accordionContainer .accordion-title {
   background: rgba(224, 40, 40, 0.79);
   cursor: pointer;
   padding: 3px 10px;
@@ -235,22 +232,22 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-.about-content .accordion-title h2 {
+.accordionContainer .accordion-title h2 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
   font-size: 14px;
 }
-.about-content .accordion-title .accordion-arrow img {
+.accordionContainer .accordion-title .accordion-arrow img {
   width: 1.5rem;
   transition: transform 0.3s ease;
   color: white;
 }
-.about-content .accordion-title .accordion-arrow .rotate {
+.accordionContainer .accordion-title .accordion-arrow .rotate {
   transform: rotate(-180deg);
 }
-.about-content .accordion-content {
+.accordionContainer .accordion-content {
   padding: 15px;
   background: rgb(245, 239, 239);
   transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
@@ -261,15 +258,25 @@ html {
   display: none;
   font-size: 14px;
 }
-.about-content .accordion-content p {
+.accordionContainer .accordion-content p {
   margin: 0;
 }
-.about-content .accordion-content.open {
+.accordionContainer .accordion-content.open {
   max-height: 200px;
   padding: 15px;
   opacity: 1;
   visibility: visible;
   display: block;
+}
+
+.aboutAccordionContainer {
+  padding: 0 110px;
+}
+
+.lodgingAccordionContainer {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -281,78 +288,17 @@ html {
   .accordion-title .accordion-arrow img {
     align-self: flex-end;
   }
-  .about-content {
-    padding: 0 15px;
-  }
-  .about-content p {
-    padding: 0px;
-  }
 }
 .lodgingAccordionContainer {
-  margin: 0 50px 20px 50px;
+  margin: 0 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn {
-  width: 48%;
-  transition: all 0.6s ease;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion {
-  background-color: rgba(224, 40, 40, 0.79);
-  border-radius: 5px;
-  overflow: hidden;
-  transition: all 0.6s ease;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5px;
-  cursor: pointer;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordion-title {
-  color: white;
-  margin: 5px;
-  font-size: 10px;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordionArrow {
-  display: flex;
-  align-items: center;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordionArrow img {
-  width: 1.5rem;
-  transition: transform 0.3s ease;
-  color: white;
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordion .lodgingAccordionArrow img.rotate {
-  transform: rotate(-180deg);
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordionContentContainer {
-  padding: 15px;
-  font-size: 14px;
-  height: auto;
-  border-radius: 5px;
-  background: rgb(245, 239, 239);
-  transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), padding 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.6s cubic-bezier(0.25, 0.8, 0.5, 1), visibility 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
-.lodgingAccordionContainer .lodgingAccordionColumn .lodgingAccordionContentContainer .lodgingAccordionContent {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-  font-size: 10px;
+  flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  .lodgingAccordionContainer {
-    margin: 20px 15px 20px 15px;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .lodgingAccordionContainer .lodgingAccordionColumn {
-    width: 100%;
-  }
-  .lodgingAccordionContainer .lodgingAccordionContentContainer {
-    height: 0px;
-  }
+.aboutAccordionContainer {
+  padding: 0 15px;
 }
+
 .errorContainer {
   display: flex;
   flex-direction: column;
@@ -438,6 +384,9 @@ html {
   }
   .carouselContainer .prev-button img, .carouselContainer .next-button img {
     width: 12px;
+  }
+  .carouselContainer .carousel-counter {
+    display: none;
   }
 }
 .lodgingFormColumns {

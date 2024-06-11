@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import { fetchLibraryData } from '../assets/Datas/API';
 import LodgingForm from '../components/LodgingForm';
+import Accordion from '../components/Accordion';
 
 export default function Lodging() {
   const { id } = useParams();
@@ -45,6 +46,10 @@ export default function Lodging() {
         <>
           <Carousel pictures={selectedLodging.pictures} />
           <LodgingForm data={selectedLodging} />
+          <div className='accordionContainer lodgingAccordionContainer'>
+            <Accordion title="Description" content={selectedLodging.description} />
+            <Accordion title="Équipements" content={selectedLodging.equipments.join(', ')} />
+          </div>
         </>
       ) : (
         <p>Lodging not found</p>
