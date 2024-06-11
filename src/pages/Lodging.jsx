@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
@@ -8,6 +8,7 @@ import LodgingForm from '../components/LodgingForm';
 
 export default function Lodging() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +27,12 @@ export default function Lodging() {
   }, []);
 
   const selectedLodging = data.find(lodging => lodging.id === id);
+
+  useEffect(() => {
+    if (!isLoading && !selectedLodging) {
+      navigate('/404');
+    }
+  }, [isLoading, selectedLodging, navigate]);
 
   if (isLoading) {
     return <p>Loading...</p>;

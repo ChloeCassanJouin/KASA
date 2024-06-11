@@ -55,7 +55,9 @@ export default function Lodgingform({ data }) {
               <div className='lodgingFormOwner'>
                 <p className='lodgingFormOwnerName'>{data.host.name}</p>
               </div>
-              <div className='lodgingFormOwnerAvatar'></div>
+              <div className='lodgingFormOwnerAvatar'>
+              <img src={data.host.picture} alt="Host Avatar" className='host-avatar' />
+              </div>
           </div>
         
           <div className='StarRatingContainer'>

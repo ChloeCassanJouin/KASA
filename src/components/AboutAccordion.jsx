@@ -25,7 +25,7 @@ export default function AboutAccordion({ title, content }) {
     );
   }
 
-Accordion.propTypes = {
+  AboutAccordion.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };

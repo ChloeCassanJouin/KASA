@@ -503,9 +503,11 @@ html {
   width: 70px;
 }
 .lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer .lodgingFormOwnerAvatar {
+  height: 40px;
+}
+.lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer .lodgingFormOwnerAvatar .host-avatar {
   width: 40px;
   height: 40px;
-  background-color: grey;
   border-radius: 50%;
 }
 .lodgingFormColumns .lodgingFormColumn2 .StarRatingContainer {

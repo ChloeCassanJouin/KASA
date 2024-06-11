@@ -72,10 +72,13 @@
       }
 
       .lodgingFormOwnerAvatar {
-        width: 40px; 
         height: 40px;
-        background-color: $quinary-color;
-        border-radius: 50%;
+
+        .host-avatar {
+          width: 40px; 
+          height: 40px;
+          border-radius: 50%;
+        }
       }
     }
     
