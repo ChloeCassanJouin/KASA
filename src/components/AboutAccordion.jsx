@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import collapseArrow from '../assets/Images/collapse-arrow.svg';
 
-export default function Accordion({ title, content }) {
+export default function AboutAccordion({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {

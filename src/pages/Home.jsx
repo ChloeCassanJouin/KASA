@@ -8,8 +8,6 @@ import homeBanner from '../assets/Images/homepage-banner.png';
 
 export default function Home() {
   const [data, setData] = useState([]);
-  console.log("Data in Home component:", data);
-  
 
   useEffect(() => {
     async function fetchData() {
