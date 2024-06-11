@@ -42,6 +42,9 @@ html {
 .header nav ul a:hover {
   text-decoration: underline;
 }
+.header nav ul .nav-link.active {
+  text-decoration: underline;
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
