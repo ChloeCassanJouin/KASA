@@ -75,6 +75,16 @@
 
 // Media queries for responsiveness
 @media (max-width: 768px) {
+  .lodgingAccordionContainer {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutAccordionContainer {
+    padding: 0 15px;
+  }
+
   .accordion-title {
     flex-direction: row;
     align-items: flex-start;
@@ -87,15 +97,4 @@
     }
   }
 }
-  
-.lodgingAccordionContainer {
-  margin: 0 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutAccordionContainer {
-  padding: 0 15px;
-}
-
 

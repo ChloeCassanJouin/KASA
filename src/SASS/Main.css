@@ -280,6 +280,14 @@ html {
 }
 
 @media (max-width: 768px) {
+  .lodgingAccordionContainer {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutAccordionContainer {
+    padding: 0 15px;
+  }
   .accordion-title {
     flex-direction: row;
     align-items: flex-start;
@@ -289,16 +297,6 @@ html {
     align-self: flex-end;
   }
 }
-.lodgingAccordionContainer {
-  margin: 0 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutAccordionContainer {
-  padding: 0 15px;
-}
-
 .errorContainer {
   display: flex;
   flex-direction: column;
