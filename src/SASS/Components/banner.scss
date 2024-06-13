@@ -15,6 +15,7 @@
         filter : brightness(50%);
         box-shadow: 0px 4px 6px $quaternary-color;
         margin-bottom: 10px;
+        object-fit: cover;
     }
 
     .aboutBanner {
@@ -23,6 +24,7 @@
         height: 10em;
         border-radius: 30px;
         filter : brightness(80%);
+        object-fit: cover;
     }
 
     .BannerTextContainer{
@@ -54,10 +56,14 @@
     .BannerContainer {
         padding: 0 15px;
 
+        .aboutBanner {
+            height: 7em;
+        }
+        
         .BannerText {
             padding: 0 70px 0px 40px;
             text-align: start;
-            } 
+        } 
 
         .break-point::after {
             content: '\A'; 

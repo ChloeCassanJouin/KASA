@@ -39,6 +39,11 @@ export default function Lodging() {
     return <p>Loading...</p>;
   }
 
+  const sections = selectedLodging ? [
+    { title: 'Description', content: selectedLodging.description },
+    { title: 'Équipements', content: selectedLodging.equipments.join(', ') },
+  ] : [];
+
   return (
     <>
       <Header />
@@ -47,8 +52,9 @@ export default function Lodging() {
           <Carousel pictures={selectedLodging.pictures} />
           <LodgingForm data={selectedLodging} />
           <div className='accordionContainer lodgingAccordionContainer'>
-            <Accordion title="Description" content={selectedLodging.description} />
-            <Accordion title="Équipements" content={selectedLodging.equipments.join(', ')} />
+            {sections.map((section, index) => (
+              <Accordion key={index} title={section.title} content={section.content} />
+            ))}
           </div>
         </>
       ) : (

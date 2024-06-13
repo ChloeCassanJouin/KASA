@@ -96,6 +96,7 @@ html {
   height: 200px;
   padding: 3px 3px 3px;
   border-radius: 5%;
+  object-fit: cover;
 }
 .Lodging .LodgingCardsContainer a .LodgingTitleContainer {
   display: flex;
@@ -176,6 +177,7 @@ html {
   filter: brightness(50%);
   box-shadow: 0px 4px 6px rgb(245, 239, 239);
   margin-bottom: 10px;
+  object-fit: cover;
 }
 .BannerContainer .aboutBanner {
   width: 100%;
@@ -183,6 +185,7 @@ html {
   height: 10em;
   border-radius: 30px;
   filter: brightness(80%);
+  object-fit: cover;
 }
 .BannerContainer .BannerTextContainer {
   position: absolute;
@@ -208,6 +211,9 @@ html {
   .BannerContainer {
     padding: 0 15px;
   }
+  .BannerContainer .aboutBanner {
+    height: 7em;
+  }
   .BannerContainer .BannerText {
     padding: 0 70px 0px 40px;
     text-align: start;
@@ -217,9 +223,13 @@ html {
     white-space: pre;
   }
 }
+.accordionContainer {
+  display: flex;
+  justify-content: space-between;
+}
 .accordionContainer .accordion {
-  margin: 20px 0;
-  background-color: rgba(224, 40, 40, 0.79);
+  flex: 0 0 47%;
+  margin: 10px 0;
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.6s ease;
@@ -270,28 +280,49 @@ html {
 }
 
 .aboutAccordionContainer {
-  padding: 0 110px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 110px;
+  flex-direction: column;
+}
+.aboutAccordionContainer .accordion {
+  flex: 0 0 47%;
 }
 
 .lodgingAccordionContainer {
-  margin: 0 50px;
   display: flex;
   justify-content: space-between;
+  margin: 10px 50px;
+}
+.lodgingAccordionContainer .accordion {
+  flex: 0 0 47%;
 }
 
 @media (max-width: 768px) {
+  .accordionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
   .lodgingAccordionContainer {
-    margin: 0 15px;
-    display: flex;
+    margin: 10px 15px;
     flex-direction: column;
   }
+  .lodgingAccordionContainer .accordion {
+    width: 100%;
+    margin: 10px 0;
+  }
   .aboutAccordionContainer {
-    padding: 0 15px;
+    padding: 20px 15px;
+    flex-direction: column;
+  }
+  .aboutAccordionContainer .accordion {
+    width: 100%;
+    margin: 10px 0;
   }
   .accordion-title {
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
   }
   .accordion-title .accordion-arrow img {
     align-self: flex-end;

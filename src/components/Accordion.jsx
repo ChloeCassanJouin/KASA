@@ -14,18 +14,17 @@ export default function Accordion({ title, content }) {
       <div className='accordion-title' onClick={toggleAccordion}>
         <h2>{title}</h2>
         <div className='accordion-arrow'>
-          <img src={collapseArrow} alt="collapse arrow" className={isOpen ? 'rotate' : ''}
-          />
+          <img src={collapseArrow} alt="collapse arrow" className={isOpen ? 'rotate' : ''} />
         </div>
       </div>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
         <p>{content}</p>
       </div>
     </div>
-    );
-  }
+  );
+}
 
- Accordion.propTypes = {
+Accordion.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };
