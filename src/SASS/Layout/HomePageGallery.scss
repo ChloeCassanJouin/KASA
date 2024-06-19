@@ -9,15 +9,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px; 
-
-        a {
-            text-decoration: none;
-            color: $secondary-color;
-
-            .LodgingCard {
-                background: linear-gradient($primary-color, $senary-color);
-                border-radius: 5%;
-            
+           
+        .LodgingCard {
+            border-radius: 5%;
+            position: relative; 
+            height: 240px;
 
             .LodgingCard:hover {
                 transform: translateY(-5px);
@@ -25,42 +21,46 @@
                 cursor: pointer;
             }
 
-                img {
-                    width: 100%;
-                    height: 200px;
-                    padding: 3px 3px 3px;
-                    border-radius: 5%;
-                    object-fit: cover;
-                }
+            img {
+                width: 100%;
+                height: 100%; 
+                padding: 0; 
+                border-radius: 5%;
+                object-fit: cover;
             }
 
-            .LodgingTitleContainer{
+            .LodgingTitleContainer {
+                position: absolute; 
+                bottom: 0; 
+                left: 0; 
+                right: 0; 
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 0%, rgba(4, 4, 4, 0.2) 20%, rgba(0, 0, 0, 0.5) 100%);
+                color: $secondary-color;
                 display: flex;
-                justify-content: center;
-                height: 50px;
-                
-                border-radius: 5%;
+                height: 100%;
+                border-radius: 0 0 5% 5%; 
+                padding: 0 0px 10px; 
 
                 .LodgingTitle {
                     margin: 0;
                     font-size: 13px;
                     display: flex;
-                    align-items: center;
-                    padding: 0 30px;
-                    text-align: center;
-                    padding-bottom: 9px;  
+                    align-items: end;
+                    padding: 0 10px; 
+                    padding-bottom: 0; 
 
                     ul {
                         display: flex;
                         flex-direction: row;
                     }
-                }   
+                }
             }
         }
     }
 }
-        
- /* Media Queries */
+
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
     .Lodging {
         margin: 20px 15px;

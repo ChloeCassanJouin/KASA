@@ -78,42 +78,44 @@ html {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-.Lodging .LodgingCardsContainer a {
-  text-decoration: none;
-  color: white;
-}
-.Lodging .LodgingCardsContainer a .LodgingCard {
-  background: linear-gradient(rgba(224, 40, 40, 0.79), rgba(181, 13, 13, 0.95));
+.Lodging .LodgingCardsContainer .LodgingCard {
   border-radius: 5%;
+  position: relative;
+  height: 240px;
 }
-.Lodging .LodgingCardsContainer a .LodgingCard .LodgingCard:hover {
+.Lodging .LodgingCardsContainer .LodgingCard .LodgingCard:hover {
   transform: translateY(-5px);
   box-shadow: 0px 4px 6px rgba(229, 117, 117, 0.848);
   cursor: pointer;
 }
-.Lodging .LodgingCardsContainer a .LodgingCard img {
+.Lodging .LodgingCardsContainer .LodgingCard img {
   width: 100%;
-  height: 200px;
-  padding: 3px 3px 3px;
+  height: 100%;
+  padding: 0;
   border-radius: 5%;
   object-fit: cover;
 }
-.Lodging .LodgingCardsContainer a .LodgingTitleContainer {
+.Lodging .LodgingCardsContainer .LodgingCard .LodgingTitleContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 0%, rgba(4, 4, 4, 0.2) 20%, rgba(0, 0, 0, 0.5) 100%);
+  color: white;
   display: flex;
-  justify-content: center;
-  height: 50px;
-  border-radius: 5%;
+  height: 100%;
+  border-radius: 0 0 5% 5%;
+  padding: 0 0px 10px;
 }
-.Lodging .LodgingCardsContainer a .LodgingTitleContainer .LodgingTitle {
+.Lodging .LodgingCardsContainer .LodgingCard .LodgingTitleContainer .LodgingTitle {
   margin: 0;
   font-size: 13px;
   display: flex;
-  align-items: center;
-  padding: 0 30px;
-  text-align: center;
-  padding-bottom: 9px;
+  align-items: end;
+  padding: 0 10px;
+  padding-bottom: 0;
 }
-.Lodging .LodgingCardsContainer a .LodgingTitleContainer .LodgingTitle ul {
+.Lodging .LodgingCardsContainer .LodgingCard .LodgingTitleContainer .LodgingTitle ul {
   display: flex;
   flex-direction: row;
 }
@@ -235,7 +237,7 @@ html {
   transition: all 0.6s ease;
 }
 .accordionContainer .accordion-title {
-  background: rgba(224, 40, 40, 0.79);
+  background: #FF6060;
   cursor: pointer;
   padding: 3px 10px;
   display: flex;
@@ -335,13 +337,13 @@ html {
   align-items: center;
 }
 .errorContainer .errorNumber {
-  color: rgba(224, 40, 40, 0.79);
+  color: #FF6060;
   font-size: 80px;
   font-weight: bold;
   margin: 40px;
 }
 .errorContainer .errorText1 {
-  color: rgba(224, 40, 40, 0.79);
+  color: #FF6060;
   margin-bottom: 40px;
 }
 .errorContainer .errorText2 {
@@ -432,7 +434,7 @@ html {
 .lodgingFormColumns .lodgingFormColumn1 .lodgingFormTitle {
   font-size: 20px;
   margin: 15px 0px 0px;
-  color: rgba(224, 40, 40, 0.79);
+  color: #FF6060;
 }
 .lodgingFormColumns .lodgingFormColumn1 .lodgingFormLocation {
   margin-top: 3px;
@@ -446,7 +448,7 @@ html {
   margin-bottom: 8px;
 }
 .lodgingFormColumns .lodgingFormColumn1 ul li {
-  background-color: rgba(224, 40, 40, 0.79);
+  background-color: #FF6060;
   border-radius: 15px;
   padding: 2px 20px;
   display: inline-block;
@@ -477,7 +479,7 @@ html {
   width: auto;
 }
 .lodgingFormColumns .lodgingFormColumn2 .lodgingFormOwnerContainer .lodgingFormOwner .lodgingFormOwnerName {
-  color: rgba(224, 40, 40, 0.79);
+  color: #FF6060;
   text-align: right;
   white-space: pre-wrap;
   word-break: break-word;
